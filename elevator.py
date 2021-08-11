@@ -14,6 +14,7 @@ class ComplexElevator:
     def startsimulation(self):
         print("welcome to elevator")
         print("please enjoy")
+        print("Copyright © Vandana")
         self.delay(0.5)
     
     def askPassenger(self,numOfPass,lof):
