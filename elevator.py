@@ -17,6 +17,7 @@ class ComplexElevator:
         self.delay(0.5)
     
     def askPassenger(self,numOfPass,lof):
+        self.startsimulation()
         self.isdooropen=False
         print("Elevator opening...")
         self.delay(0.5)
@@ -77,7 +78,7 @@ class ComplexElevator:
                 print(self.curf, "F | unloading passenger (",self.destination_list[self.shortest-1], ") at", self.curf,"| F")
                 self.destination_list[self.shortest-1]=self.destination_list[self.shortest-1]-1
                 self.delay(0.5)
-        #askPassenger()
+        #askPassenger() # uncomment to run continous (means after 1 batch finished will ask inputs for other batch
                 
         
     
