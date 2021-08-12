@@ -126,7 +126,7 @@ class ComplexElevator:
         
     def down(self):
         self.curf=self.curf-1
-        print(self.curf," | FGoing up...")
+        print(self.curf," | F Going up...")
     
     def delay(self,ms):
         time.sleep(ms)
