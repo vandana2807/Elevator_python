@@ -2,15 +2,15 @@
 
 How to run
 
-create an object
+# create an object
 
 e = ComplexElevator()
 
-calling the function 
+# calling the function 
 
 e.askPassenger(5,[3,7,5,20,12]) #this will run till all 5 passenger reach their destination and program stops
 
-when using inputs from command line 
+# when using inputs from command line 
 
 e.askPassenger()
 
