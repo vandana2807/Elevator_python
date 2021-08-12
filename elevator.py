@@ -26,12 +26,9 @@ class ComplexElevator:
         self.lof=lof
         if self.numOfPass<self.minp or self.numOfPass>self.maxp:
             print("Error, valid number of passengers [1-20]")
-        self.listofloors=[]
-        #self.floor=0
-        
+            
         #isvalidentry=False
         for a in range(0,self.numOfPass):
-            #self.floor=self.askPassFloor(a)
             self.floor=self.lof[a]
             print("Passenger # ",a+1,"floor number :",self.floor,"| F")
             if self.floor<self.minf or self.floor>self.maxf:
@@ -50,21 +47,46 @@ class ComplexElevator:
         self.delay(0.5)
         self.isdooropen=False
         self.initialize_elevator()
+     
+    #uncomment if yoou want to take input from command line
+    #def askPassenger(self):
+    #    self.startsimulation()
+    #    self.isdooropen=False
+    #    print("Elevator opening...")
+    #    self.delay(0.5)
+    #    print(self.curf,"| F","how many passengers :")
+    #    self.numOfPass =int(input())
+    #    if self.numOfPass<self.minp or self.numOfPass>self.maxp:
+    #        print("Error, valid number of passengers [1-20]")
+    #        self.askPassenger()
+    #    else:
+    #        self.lof=[]
+    #        for a in range(0,self.numOfPass):
+    #            self.floor=self.askPassFloor(a)
+    #            if self.floor not in self.listofloors:
+    #                self.listofloors.append(self.floor)
+    #    print("all destinations", self.destination_list)
+    #    print("unique destinations", self.listofloors)
+    #    print("Elevator closing...")
+    #    self.delay(0.5)
+    #    self.isdooropen=False
+    #    self.initialize_elevator()
         
+    #uncomment if you want to take input from command line
     #def askPassFloor(self,pid):
-    #        self.isvalidentry=False
-    #        self.floor=0
-    #        while not isvalidentry:
-    #           self.floor=self.lof[pid]
-    #            print("Passenger # ",pid+1,"floor number :",self.floor)
-    #            if self.floor<self.minf or self.floor>self.maxf:
-    #                print("Error floor[1-20]")
-    #            elif self.floor==self.curf:
-    #                print("You are already in the", self.curf, "floor")
-    #            else:
-    #                self.destination_list[self.floor-1]=self.destination_list[self.floor-1]+1
-    #                self.isvalidentry=True
-    #        return self.floor
+    #    self.isvalidentry=False
+    #    self.floor=0
+    #    while not self.isvalidentry:
+    #        print("Passenger # ",pid+1,"enter your floor :")
+    #        self.floor=int(input())
+    #        if self.floor<self.minf or self.floor>self.maxf:
+    #            print("Error you have entered out of range floor, valid [1-20]")
+    #        elif self.floor==self.curf:
+    #            print("You are already in the", self.curf, "floor")
+    #        else:
+    #            self.destination_list[self.floor-1]=self.destination_list[self.floor-1]+1
+    #            self.isvalidentry=True
+    #    return self.floor
     
     def initialize_elevator(self):
         for a in range(0,len(self.listofloors)):
